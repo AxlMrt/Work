@@ -1,4 +1,4 @@
-import { Link, Logo, NavLinks, SocialIcons, StyledNav, Themeicon } from "./NavBar.styles";
+import { Link, Logo, NavLinks, SocialIcons, StyledNav, ThemeIcon } from "./NavBar.styles";
 import { FaFacebook, FaInstagram, FaMoon, FaSun } from "react-icons/fa"
 import {motion} from "framer-motion"
  
@@ -17,6 +17,7 @@ const NavBar = ({theme, toggleTheme}) => {
     hidden: { opacity: 0, y: -100, },
     visible: { opacity: 1, y: 0, }
   }
+
   return ( 
     <>
       <StyledNav initial="hidden" animate="visible" variants={NavItems}>
@@ -27,9 +28,9 @@ const NavBar = ({theme, toggleTheme}) => {
           <Link href="/" variants={item}>Accueil</Link>
           <Link href="#" variants={item}>Menu</Link>
         </NavLinks>
-        <Themeicon onClick={toggleTheme} colorTheme={theme} variants={item}>
+        <ThemeIcon onClick={toggleTheme} colorTheme={theme} variants={item}>
           {theme === 'light' ? <FaMoon /> : <FaSun /> }
-        </Themeicon>
+        </ThemeIcon>
         <SocialIcons>
           <motion.div variants={item}>
             <a href="https://www.facebook.com/profile.php?id=100026806789522">

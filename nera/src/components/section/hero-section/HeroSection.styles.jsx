@@ -46,18 +46,36 @@ export const HeroContent = styled.div`
 }
 `;
 
+export const Sandwichs = styled.div`
+  img{
+    width: 500px;
+    margin: 60px -40px 0 0;
+  }
+
+  @media screen and (max-width: 1150px){
+    img{
+      width: 400px;
+      margin-top: 50px;
+    }
+  }
+
+  @media screen and (max-width: 890px){
+    display: none;
+  }
+`
+
 export const ImageContainer = styled.div`
   right: 0;
   position: absolute;
   flex: 1;
 
   img{
-    width: 1000px;
+    width: 950px;
   }
 
   @media screen and (max-width: 1025px){
     img{
-      width: 900px;
+      width: 800px;
     }
   }
 

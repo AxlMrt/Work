@@ -40,7 +40,7 @@ export const Link = styled(motion.a)`
   }
 `;
 
-export const Themeicon = styled(motion.div)`
+export const ThemeIcon = styled(motion.div)`
   width: 50px;
   height: 50px;
   display: flex;
