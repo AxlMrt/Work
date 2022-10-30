@@ -39,7 +39,7 @@ function App() {
       <Container>
         <GlobalStyles />
         <NavBar theme={theme} toggleTheme={toggleTheme}/>
-        <HeroSection />
+        <HeroSection theme={theme}/>
       </Container>
       
     </ThemeProvider>

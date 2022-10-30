@@ -2,7 +2,7 @@ import { FaPhone, FaRegEdit } from "react-icons/fa"
 import { ContactIcons, HeroContent, ImageContainer, StyledHeroSection } from "./HeroSection.styles"
 import {motion} from "framer-motion"
 
-const HeroSection = () => {
+const HeroSection = ({theme}) => {
   const HeroItems = {
     hidden: { opacity: 0 },
     visible: { 
@@ -37,7 +37,7 @@ const HeroSection = () => {
           </motion.a>
         </ContactIcons>
       <ImageContainer>
-        <motion.img src="./images/NeraBlack.png" alt="" variants={{
+        <motion.img src={theme === 'light' ? "./images/NeraWhite.png" : "./images/NeraBlack.png"} alt="" variants={{
           hidden: { opacity: 0, x: 0, },
           visible: { opacity: 1, x: 0, }}}
         />
