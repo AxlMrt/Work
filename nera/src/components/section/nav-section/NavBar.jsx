@@ -42,10 +42,11 @@ const NavBar = ({theme, toggleTheme}) => {
           <NavLinks>
             <Link href="/" variants={item}>Accueil</Link>
             <Link href="#" variants={item}>Menu</Link>
+            <ThemeIcon onClick={toggleTheme} theme={theme} variants={item}>
+              {theme === 'light' ? <FaMoon /> : <FaSun /> }
+            </ThemeIcon>
           </NavLinks>
-          <ThemeIcon onClick={toggleTheme} theme={theme} variants={item}>
-            {theme === 'light' ? <FaMoon /> : <FaSun /> }
-          </ThemeIcon>
+          
           <SocialIcons>
             <motion.div variants={item}>
               <a href="https://www.facebook.com/profile.php?id=100026806789522">

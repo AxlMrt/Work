@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './components/Globals.styles';
-import NavBar from './components/layout/nav/NavBar';
+import NavBar from './components/section/nav-section/NavBar';
 import HeroSection from './components/section/hero-section/HeroSection'
 
 const Container = styled.div`
@@ -15,13 +15,13 @@ const Container = styled.div`
 `;
 
 const LightTheme = {
-  background: 'white',
+  background: '#f2f3f4',
   fontColor: 'black',
 };
 
 const DarkTheme = {
   background: 'black',
-  fontColor: 'white',
+  fontColor: '#f2f3f4',
 };
 
 function App() {

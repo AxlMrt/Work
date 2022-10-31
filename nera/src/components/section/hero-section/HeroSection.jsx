@@ -1,6 +1,6 @@
 import React from "react";
 import { FaPhone, FaRegEdit } from "react-icons/fa";
-import { ContactIcons, HeroContent, ImageContainer, Sandwichs, StyledHeroSection } from "./HeroSection.styles";
+import { ContactIcons, HeroContent, ImageContainer, StyledHeroSection } from "./HeroSection.styles";
 import {motion} from "framer-motion";
 import data from "./data.js";
 
@@ -20,7 +20,7 @@ const HeroSection = ({theme}) => {
     visible: { opacity: 1, x: 0, }
   }
 
-  const [image, setImage] = React.useState('./images/sandwichs/bignera.png');
+  const [image, setImage] = React.useState('./images/sandwichs/boca.png');
 
   function changeImage() {
     const randomImg = Math.floor(Math.random() * data.length);
@@ -35,9 +35,6 @@ const HeroSection = ({theme}) => {
         <motion.h2 variants={item}>Bienvenue chez <span>Nera</span></motion.h2>
         <motion.p variants={item}>Sandwicherie de qualitéééééé</motion.p>
         
-        <Sandwichs>
-          <motion.img src={image} alt="sandwich" variants={item}/>
-        </Sandwichs>
       </HeroContent>
         
         <ContactIcons>
@@ -53,10 +50,15 @@ const HeroSection = ({theme}) => {
           </motion.a>
         </ContactIcons>
       <ImageContainer>
-        <motion.img src={theme === 'light' ? "./images/logo/NeraWhite.png" : "./images/logo/NeraBlack.png"} alt="Logo Nera" variants={{
-          hidden: { opacity: 0, x: 0, },
-          visible: { opacity: 1, x: 0, }}}
-        />
+        <div>
+          <motion.img src={image} alt="sandwich" variants={item}/>
+        </div>
+        <div>
+          <motion.img src={theme === 'light' ? "./images/logo/NeraWhite.png" : "./images/logo/NeraBlack.png"} alt="Logo Nera" variants={{
+            hidden: { opacity: 0, x: 0, },
+            visible: { opacity: 1, x: 0, }}}
+          />
+        </div>
       </ImageContainer>
     </StyledHeroSection>
   </>)

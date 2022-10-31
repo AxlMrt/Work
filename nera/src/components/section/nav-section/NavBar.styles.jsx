@@ -8,14 +8,15 @@ export const StyledNav = styled(motion.nav)`
   height: 4rem;
 
   @media screen and (max-width: 890px){
+    position: absolute;
+    height: 80vh;
+    width: 60vw;
     display: ${({wrap}) => wrap ? 'inline' : 'none' };
     background: ${({theme}) => theme === "dark" ? theme.background : theme.fontColor};
     color: ${({theme}) => theme === "dark" ? theme.fontColor : theme.background};
-    height: 100vh;
-    width: 60vw;
     padding: 1rem;
-    position: absolute;
     text-align: center;
+    border-radius: .6rem;
   }
 `;
 
@@ -28,29 +29,40 @@ export const Logo = styled(motion.div)`
     color: ${({theme}) => theme === "dark" ? "white" : '#fdc153'};
   }
 
+  @media screen and (max-width: 890px){
+    span{
+      color: ${({theme}) => theme === "dark" ? "black" : '#fdc153'};
+    }
+  }
+
   @media screen and (max-width: 460px){
     font-size: 1.1rem;
   }
 
 `;
 
-export const NavLinks = styled.div``;
+export const NavLinks = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  @media screen and (max-width: 890px){
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+`;
+
 export const Link = styled(motion.a)`
-  display: inline-block;
   text-decoration: none;
-  margin-right: 3rem;
   color: ${({theme}) => theme.fontColor};
   font-weight: 600;
-  &:last-child{
-    margin-right: 0;
-  }
   &:hover {
     color: #ffc14d
   }
 
   @media screen and (max-width: 890px){
-    display: block;
-    margin: 1rem 0 1rem 0;
     color: ${({theme}) => theme === "dark" ? theme.fontColor : theme.background};
   }
 `;
