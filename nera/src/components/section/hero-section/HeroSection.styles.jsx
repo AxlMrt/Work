@@ -13,10 +13,9 @@ export const StyledHeroSection = styled(motion.div)`
 `;
 
 export const HeroContent = styled.div`
-  align-self: flex-start;
-  margin-top: 5.6rem;
+  margin-top: 4rem;
   flex: 1;
-
+  height: 100%;
     h2{
       font-size: 4.5rem;
       font-weight: 500;
@@ -38,7 +37,7 @@ export const HeroContent = styled.div`
     line-height: 5rem;
   }
 
-  @media screen and (max-width: 650px){
+  @media screen and (max-width: 660px){
     font-size: 3rem;
     line-height: 3.75rem;
   }
@@ -46,10 +45,12 @@ export const HeroContent = styled.div`
 `;
 
 export const Sandwichs = styled.div`
-
+  height: 50%;
+  display: flex;
+  align-items: center;
   img{
     width: 40%;
-    margin: 3.75rem -2.5rem 0 0;
+
   }
 
   @media screen and (max-width: 890px){
@@ -58,30 +59,19 @@ export const Sandwichs = styled.div`
 `
 
 export const ImageContainer = styled.div`
-  right: 10%;
+  right: 0;
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-  img{
-    width: 140%;
-  }
 
   @media screen and (max-width: 890px){
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    img{
-      margin-top: 3.75rem;
-    }
-  }
-
-  @media screen and (max-width: 890px){
+    width: 100%;
     img{
       width: 100%;
+      margin-top: 4rem;
     }
-  }
-
   }
 `;
 

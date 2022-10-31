@@ -9,7 +9,7 @@ const Container = styled.div`
   height: 100vh;
   padding: 0 6rem;
   position: relative;
-  @media screen and (max-width: 740px){
+  @media screen and (max-width: 890px){
     padding: 0 3rem;
   }
 `;
