@@ -1,6 +1,6 @@
 import React from "react";
 import { FaPhone, FaRegEdit } from "react-icons/fa";
-import { ContactIcons, HeroContent, ImageContainer, StyledHeroSection } from "./HeroSection.styles";
+import { ContactIcons, HeroContent, ImageContainer, StyledButtons, StyledHeroSection } from "./HeroSection.styles";
 import {motion} from "framer-motion";
 import data from "./data.js";
 
@@ -34,7 +34,10 @@ const HeroSection = ({theme}) => {
       <HeroContent>
         <motion.h2 variants={item}>Bienvenue chez <span>Nera</span></motion.h2>
         <motion.p variants={item}>Sandwicherie de qualitéééééé</motion.p>
-        
+        <StyledButtons>
+          <button>Menu</button>
+          <button>Localisation</button>
+        </StyledButtons>
       </HeroContent>
         
         <ContactIcons>

@@ -26,6 +26,8 @@ export const HeroContent = styled.div`
     p{
       margin: 5px 0 5px 0;
     }
+
+    
   @media screen and (max-width: 890px){
     margin-top: -3rem;
     font-size: 4.5rem;
@@ -64,9 +66,27 @@ export const ImageContainer = styled.div`
     div img{
       width: 50%;
     }
-
   }
 `;
+
+export const StyledButtons = styled.div`
+  display: flex;
+  button{
+    background: none;
+    outline: none;
+    border: 2px solid #eeeeee;
+    padding: 1rem 2.2rem;
+    margin-right: 1.5rem;
+    border-radius: 2.2rem;
+    color: ${({theme}) => theme.fontColor};
+
+    &:hover{
+      background: #ffc14d;
+      cursor: pointer;
+      color: ${({theme}) => theme.background};
+    }
+  }
+`
 
 
 export const ContactIcons = styled.div`
