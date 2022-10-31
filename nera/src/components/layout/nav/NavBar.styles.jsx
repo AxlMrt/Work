@@ -22,9 +22,10 @@ export const StyledNav = styled(motion.nav)`
 export const Logo = styled(motion.div)`
   font-weight: 700;
   font-size: 25px;
+  color: ${({theme}) => theme === "dark" ? '#fdc153' : theme.fontColor};
 
   span{
-    color: #cbd5e1;
+    color: ${({theme}) => theme === "dark" ? "#cbd5e1" : '#fdc153'};
   }
 
   @media screen and (max-width: 460px){

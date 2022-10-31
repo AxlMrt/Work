@@ -18,7 +18,6 @@ export const HeroContent = styled.div`
   flex: 1;
 
     h2{
-
       font-size: 70px;
       font-weight: 500;
       line-height: 90px;

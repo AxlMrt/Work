@@ -36,7 +36,7 @@ const NavBar = ({theme, toggleTheme}) => {
         </Burg>
       
       <StyledNav initial="hidden" animate="visible" variants={NavItems} wrap={burgerOpen}>
-          <Logo variants={item}>
+          <Logo variants={item} theme={theme}>
             Nera<span>Sandwicherie</span>
           </Logo>
           <NavLinks>
