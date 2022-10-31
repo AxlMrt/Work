@@ -49,7 +49,7 @@ export const Sandwichs = styled.div`
   display: flex;
   align-items: center;
   img{
-    width: 40%;
+    width: 30rem;
 
   }
 
@@ -79,7 +79,7 @@ export const ImageContainer = styled.div`
 export const ContactIcons = styled.div`
   display: flex;
   position: absolute;
-  bottom: 3rem;
+  bottom: 2%;
   left: 6.5rem;
 
   a{
