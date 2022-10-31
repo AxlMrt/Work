@@ -5,13 +5,13 @@ export const StyledNav = styled(motion.nav)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 70px;
+  height: 4rem;
 
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: 890px){
     display: ${({wrap}) => wrap ? 'inline' : 'none' };
     background: ${({theme}) => theme === "dark" ? theme.background : theme.fontColor};
     color: ${({theme}) => theme === "dark" ? theme.fontColor : theme.background};
-    height: 80vh;
+    height: 100vh;
     width: 60vw;
     padding: 1rem;
     position: absolute;
@@ -21,15 +21,15 @@ export const StyledNav = styled(motion.nav)`
 
 export const Logo = styled(motion.div)`
   font-weight: 700;
-  font-size: 25px;
+  font-size: 1.5rem;
   color: ${({theme}) => theme === "dark" ? '#fdc153' : theme.fontColor};
 
   span{
-    color: ${({theme}) => theme === "dark" ? "#cbd5e1" : '#fdc153'};
+    color: ${({theme}) => theme === "dark" ? "white" : '#fdc153'};
   }
 
   @media screen and (max-width: 460px){
-    font-size: 18px;
+    font-size: 1.1rem;
   }
 
 `;
@@ -38,7 +38,7 @@ export const NavLinks = styled.div``;
 export const Link = styled(motion.a)`
   display: inline-block;
   text-decoration: none;
-  margin-right: 50px;
+  margin-right: 3rem;
   color: ${({theme}) => theme.fontColor};
   font-weight: 600;
   &:last-child{
@@ -48,7 +48,7 @@ export const Link = styled(motion.a)`
     color: #ffc14d
   }
 
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: 890px){
     display: block;
     margin: 1rem 0 1rem 0;
     color: ${({theme}) => theme === "dark" ? theme.fontColor : theme.background};
@@ -56,16 +56,16 @@ export const Link = styled(motion.a)`
 `;
 
 export const ThemeIcon = styled(motion.div)`
-  width: 50px;
-  height: 50px;
+  width: 3rem;
+  height: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: ${({theme}) => theme === "dark" ? "#ffc14d" : theme.fontColor};
   cursor: pointer;
 
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: 890px){
     width: 100%;
   }
 
@@ -74,7 +74,7 @@ export const ThemeIcon = styled(motion.div)`
 export const SocialIcons = styled(motion.div)`
   display: flex;
   div{
-    margin-right: 10px;
+    margin-right: .6rem;
     &:last-child{
       margin-right: 0;
     }
@@ -86,8 +86,8 @@ export const SocialIcons = styled(motion.div)`
     align-items: center;
     justify-content: center;
     border: 2px solid #eeeeee;
-    border-radius: 10px;
-    padding: 12px;
+    border-radius: .6rem;
+    padding: .75rem;
 
     &:hover{
       color: ${({theme}) => theme.background};
@@ -95,14 +95,14 @@ export const SocialIcons = styled(motion.div)`
     }
   }
 
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: 890px){
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
     div{
-      width: 50px;
-      margin-bottom: 10px;
+      width: 3rem;
+      margin-bottom: .6rem;
       margin-right: 0;
     }
 
@@ -149,7 +149,7 @@ export const Burg = styled(motion.div)`
   display: none;
   padding-top: 2rem;
 
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: 890px){
     display: fixed;
     z-index: 10;
   }

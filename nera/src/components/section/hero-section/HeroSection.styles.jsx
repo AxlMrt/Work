@@ -5,7 +5,7 @@ export const StyledHeroSection = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: calc(100% - 70px);
+  height: calc(100% - 4.4rem);
 
   @media screen and (max-width: 890px){
     text-align: center;
@@ -14,13 +14,13 @@ export const StyledHeroSection = styled(motion.div)`
 
 export const HeroContent = styled.div`
   align-self: flex-start;
-  margin-top: 90px;
+  margin-top: 5.6rem;
   flex: 1;
 
     h2{
-      font-size: 70px;
+      font-size: 4.5rem;
       font-weight: 500;
-      line-height: 90px;
+      line-height: 5.5rem;
       span{
         color: #ffc14d;
         font-weight: 700;
@@ -33,14 +33,14 @@ export const HeroContent = styled.div`
 
 
   @media screen and (max-width: 890px){
-    margin-top: -50px;
-    font-size: 70px;
-    line-height: 80px;
+    margin-top: -3rem;
+    font-size: 4.5rem;
+    line-height: 5rem;
   }
 
   @media screen and (max-width: 650px){
-    font-size: 50px;
-    line-height: 60px;
+    font-size: 3rem;
+    line-height: 3.75rem;
   }
 }
 `;
@@ -48,15 +48,8 @@ export const HeroContent = styled.div`
 export const Sandwichs = styled.div`
 
   img{
-    width: 500px;
-    margin: 60px -40px 0 0;
-  }
-
-  @media screen and (max-width: 1150px){
-    img{
-      width: 400px;
-      margin-top: 100px;
-    }
+    width: 40%;
+    margin: 3.75rem -2.5rem 0 0;
   }
 
   @media screen and (max-width: 890px){
@@ -65,29 +58,21 @@ export const Sandwichs = styled.div`
 `
 
 export const ImageContainer = styled.div`
-  right: 0;
+  right: 10%;
   position: absolute;
-
+  overflow: hidden;
   img{
-    width: 950px;
-  }
-
-  @media screen and (max-width: 1025px){
-    
-    img{
-      width: 800px;
-    }
+    width: 140%;
   }
 
   @media screen and (max-width: 890px){
-    width: 100%;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
 
     img{
-      width: 700px;
-      margin-top: 60px;
+      margin-top: 3.75rem;
     }
   }
 
@@ -104,20 +89,20 @@ export const ImageContainer = styled.div`
 export const ContactIcons = styled.div`
   display: flex;
   position: absolute;
-  bottom: 60px;
-  left: 100px;
+  bottom: 3rem;
+  left: 6.5rem;
 
   a{
-    width: 60px;
-    height: 60px;
+    width: 3.75rem;
+    height: 3.75rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 20px;
+    margin-right: 1.2rem;
     border: 1px solid #dadada;
     color: ${({theme}) => theme.fontColor};
-    font-size: 20px;
+    font-size: 1.2rem;
 
     &:hover{
       background: #ffc14d;
@@ -127,8 +112,8 @@ export const ContactIcons = styled.div`
   }
 
   @media screen and (max-width: 890px){
-    bottom: 50px;
-    left: 0px;
+    bottom: 6rem;
+    left: 0;
     width: 100%;
     display: flex;
     align-items: center;

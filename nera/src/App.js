@@ -7,10 +7,10 @@ import HeroSection from './components/section/hero-section/HeroSection'
 const Container = styled.div`
   width: 100%;
   height: 100vh;
-  padding: 0 100px;
+  padding: 0 6rem;
   position: relative;
-  @media screen and (max-width: 950px){
-    padding: 0 50px;
+  @media screen and (max-width: 740px){
+    padding: 0 3rem;
   }
 `;
 
