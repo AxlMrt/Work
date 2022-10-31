@@ -13,7 +13,7 @@ export const StyledHeroSection = styled(motion.div)`
 `;
 
 export const HeroContent = styled.div`
-  margin-top: 4rem;
+  padding-top: 4.5rem;
   flex: 1;
   height: 100%;
     h2{
@@ -48,9 +48,10 @@ export const Sandwichs = styled.div`
   height: 50%;
   display: flex;
   align-items: center;
+  width: 40%;
+  
   img{
-    width: 30rem;
-
+    width: 100%;
   }
 
   @media screen and (max-width: 890px){
@@ -60,6 +61,7 @@ export const Sandwichs = styled.div`
 
 export const ImageContainer = styled.div`
   right: 0;
+  width: 60%;
   position: absolute;
   display: flex;
   align-items: center;
@@ -83,14 +85,14 @@ export const ContactIcons = styled.div`
   left: 6.5rem;
 
   a{
-    width: 3.75rem;
-    height: 3.75rem;
-    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 1.2rem;
     border: 1px solid #dadada;
+    border-radius: 50%;
     color: ${({theme}) => theme.fontColor};
     font-size: 1.2rem;
 
@@ -102,7 +104,7 @@ export const ContactIcons = styled.div`
   }
 
   @media screen and (max-width: 890px){
-    bottom: 6rem;
+    bottom: 1rem;
     left: 0;
     width: 100%;
     display: flex;

@@ -147,7 +147,7 @@ export const Hamburger = styled(motion.div)`
 
 export const Burg = styled(motion.div)`
   display: none;
-  padding-top: 2rem;
+  padding-top: 1rem;
 
   @media screen and (max-width: 890px){
     display: fixed;
