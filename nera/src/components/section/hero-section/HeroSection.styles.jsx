@@ -18,7 +18,7 @@ export const HeroContent = styled.div`
   flex: 1;
 
     h2{
-      position: relative;
+
       font-size: 70px;
       font-weight: 500;
       line-height: 90px;
@@ -47,6 +47,7 @@ export const HeroContent = styled.div`
 `;
 
 export const Sandwichs = styled.div`
+
   img{
     width: 500px;
     margin: 60px -40px 0 0;
@@ -55,7 +56,7 @@ export const Sandwichs = styled.div`
   @media screen and (max-width: 1150px){
     img{
       width: 400px;
-      margin-top: 50px;
+      margin-top: 100px;
     }
   }
 
@@ -67,13 +68,13 @@ export const Sandwichs = styled.div`
 export const ImageContainer = styled.div`
   right: 0;
   position: absolute;
-  flex: 1;
 
   img{
     width: 950px;
   }
 
   @media screen and (max-width: 1025px){
+    
     img{
       width: 800px;
     }
@@ -84,13 +85,14 @@ export const ImageContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
     img{
       width: 700px;
       margin-top: 60px;
     }
   }
 
-  @media screen and (max-width: 650px){
+  @media screen and (max-width: 890px){
     img{
       width: 100%;
     }

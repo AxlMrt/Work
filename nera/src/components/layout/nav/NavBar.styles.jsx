@@ -6,7 +6,18 @@ export const StyledNav = styled(motion.nav)`
   align-items: center;
   justify-content: space-between;
   height: 70px;
-`
+
+  @media screen and (max-width: 767px){
+    display: ${({wrap}) => wrap ? 'inline' : 'none' };
+    background: ${({theme}) => theme === "dark" ? theme.background : theme.fontColor};
+    color: ${({theme}) => theme === "dark" ? theme.fontColor : theme.background};
+    height: 80vh;
+    width: 60vw;
+    padding: 1rem;
+    position: absolute;
+    text-align: center;
+  }
+`;
 
 export const Logo = styled(motion.div)`
   font-weight: 700;
@@ -16,14 +27,11 @@ export const Logo = styled(motion.div)`
     color: #cbd5e1;
   }
 
-  @media screen and (max-width: 890px){
+  @media screen and (max-width: 460px){
     font-size: 18px;
   }
 
-  @media screen and (max-width: 650px){
-    display: none;
-  }
-`
+`;
 
 export const NavLinks = styled.div``;
 export const Link = styled(motion.a)`
@@ -38,6 +46,12 @@ export const Link = styled(motion.a)`
   &:hover {
     color: #ffc14d
   }
+
+  @media screen and (max-width: 767px){
+    display: block;
+    margin: 1rem 0 1rem 0;
+    color: ${({theme}) => theme === "dark" ? theme.fontColor : theme.background};
+  }
 `;
 
 export const ThemeIcon = styled(motion.div)`
@@ -47,8 +61,13 @@ export const ThemeIcon = styled(motion.div)`
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  color:${({theme, colorTheme}) => colorTheme === "dark" ? "#ffc14d" : theme.fontColor};
+  color: ${({theme}) => theme === "dark" ? "#ffc14d" : theme.fontColor};
   cursor: pointer;
+
+  @media screen and (max-width: 767px){
+    width: 100%;
+  }
+
 `;
 
 export const SocialIcons = styled(motion.div)`
@@ -73,5 +92,64 @@ export const SocialIcons = styled(motion.div)`
       color: ${({theme}) => theme.background};
       background: #ffc14d
     }
+  }
+
+  @media screen and (max-width: 767px){
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    div{
+      width: 50px;
+      margin-bottom: 10px;
+      margin-right: 0;
+    }
+
+    a{
+      color: ${({theme}) => theme === "dark" ? theme.fontColor : theme.background};
+      
+    }
+  }
+`;
+
+export const Hamburger = styled(motion.div)`
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+  z-index: 10;
+  cursor: pointer;
+
+  div{
+    width: 2rem;
+    height: 0.25rem;
+    border-radius: 10px;
+    background: ${({theme}) => theme === "dark" ? "#ffc14d" : theme.fontColor};
+    transform-origin: 1px;
+    transition: all 0.3 linear;
+  }
+
+  div:first-of-type{
+    transform: ${({open}) => open === true ? 'rotate(45deg)' : 'rotate(0)'};
+  }
+
+  div:nth-of-type(2n){
+    transform: ${({open}) => open ? 'translateX(100%)' : 'translateX(0)'};
+    opacity: ${({open}) => open ? 0 : 1};
+  }
+
+  div:last-of-type{
+    transform: ${({open}) => open === true ? 'rotate(-45deg)' : 'rotate(0)'};
+  }
+`;
+
+export const Burg = styled(motion.div)`
+  display: none;
+  padding-top: 2rem;
+
+  @media screen and (max-width: 767px){
+    display: fixed;
+    z-index: 10;
   }
 `

@@ -20,22 +20,23 @@ const HeroSection = ({theme}) => {
     visible: { opacity: 1, x: 0, }
   }
 
-  const [image, setImage] = React.useState('./images/sandwichs/bignera.png')
+  const [image, setImage] = React.useState('./images/sandwichs/bignera.png');
 
   function changeImage() {
     const randomImg = Math.floor(Math.random() * data.length);
     setImage(data[randomImg].url);
   }
 
-  setInterval(changeImage, 5000);
+  /* setInterval(changeImage, 5000); */
 
   return (<>
     <StyledHeroSection initial="hidden" animate="visible" variants={HeroItems}>
       <HeroContent>
         <motion.h2 variants={item}>Bienvenue chez <span>Nera</span></motion.h2>
         <motion.p variants={item}>Sandwicherie de qualitéééééé</motion.p>
+        
         <Sandwichs>
-          <img src={image} alt="sandwich"/>
+          <motion.img src={image} alt="sandwich" variants={item}/>
         </Sandwichs>
       </HeroContent>
         

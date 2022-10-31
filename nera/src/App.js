@@ -26,9 +26,6 @@ const DarkTheme = {
 
 function App() {
   const [theme, setTheme] = React.useState('dark');
-  /* const card = data.map((sandwich) => {
-    return <Menu key={sandwich.nom} sandwich={sandwich} />;
-  }); */
 
   function toggleTheme() {
     theme === 'light' ? setTheme('dark') : setTheme('light');
