@@ -8,10 +8,11 @@ export const StyledNav = styled(motion.nav)`
   height: 4rem;
 
   @media screen and (max-width: 890px){
+    z-index: 1001;
     position: absolute;
     height: 80vh;
     width: 60vw;
-    display: ${({wrap}) => wrap ? 'inline' : 'none' };
+    display: ${({open}) => open ? 'inline' : 'none' };
     background: ${({theme}) => theme === "dark" ? theme.background : theme.fontColor};
     color: ${({theme}) => theme === "dark" ? theme.fontColor : theme.background};
     padding: 1rem;
@@ -54,16 +55,24 @@ export const NavLinks = styled.div`
   }
 `;
 
-export const Link = styled(motion.a)`
-  text-decoration: none;
-  color: ${({theme}) => theme.fontColor};
-  font-weight: 600;
-  &:hover {
-    color: #ffc14d
+export const Link = styled(motion.div)`
+  * {
+    text-decoration: none;
+    color: ${({theme}) => theme.fontColor};
+    font-weight: 600;
+    transition: .15s ease-in-out;
+
+    &:hover {
+      color: #ffc14d;
+      transition: .15s ease-in-out;
+    }
   }
+  
 
   @media screen and (max-width: 890px){
-    color: ${({theme}) => theme === "dark" ? theme.fontColor : theme.background};
+    *{
+      color: ${({theme}) => theme === "dark" ? theme.fontColor : theme.background};
+    }
   }
 `;
 
@@ -87,6 +96,7 @@ export const SocialIcons = styled(motion.div)`
   display: flex;
   div{
     margin-right: .6rem;
+
     &:last-child{
       margin-right: 0;
     }
@@ -100,10 +110,12 @@ export const SocialIcons = styled(motion.div)`
     border: 2px solid #eeeeee;
     border-radius: .6rem;
     padding: .75rem;
+    transition: .15s ease-in-out;
 
     &:hover{
       color: ${({theme}) => theme.background};
-      background: #ffc14d
+      background: #ffc14d;
+      transition: .15s ease-in-out;
     }
   }
 

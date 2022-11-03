@@ -2,7 +2,8 @@ import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './components/Globals.styles';
 import NavBar from './components/section/nav-section/NavBar';
-import HeroSection from './components/section/hero-section/HeroSection'
+import Main from './Main';
+import { map } from 'leaflet';
 
 const Container = styled.div`
   width: 100%;
@@ -36,7 +37,7 @@ function App() {
       <Container>
         <GlobalStyles />
         <NavBar theme={theme} toggleTheme={toggleTheme}/>
-        <HeroSection theme={theme}/>
+        <Main theme={theme}/>
       </Container>
       
     </ThemeProvider>

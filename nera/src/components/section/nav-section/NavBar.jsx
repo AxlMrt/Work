@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from 'react-router-dom';
 import { Link, Logo, NavLinks, SocialIcons, StyledNav, ThemeIcon } from "./NavBar.styles";
 import { FaFacebook, FaInstagram, FaMoon, FaSun } from "react-icons/fa";
 import {motion} from "framer-motion";
@@ -25,23 +26,25 @@ const NavBar = ({theme, toggleTheme}) => {
   
   function toggleBurger() {
     setBurgerOpen(!burgerOpen)
+    
   }
 
   return ( 
     <>
-        <Burg onClick={toggleBurger} theme={theme} initial="hidden" animate="visible" variants={NavItems}>
+        <Burg onClick={toggleBurger} theme={theme} initial="hidden" animate="visible" variants={NavItems} >
           <motion.div variants={item}>
           <Burger open={burgerOpen}/>
           </motion.div>
         </Burg>
       
-      <StyledNav initial="hidden" animate="visible" variants={NavItems} wrap={burgerOpen}>
+      <StyledNav initial="hidden" animate="visible" variants={NavItems} open={burgerOpen}>
           <Logo variants={item} theme={theme}>
             Nera<span>Sandwicherie</span>
           </Logo>
           <NavLinks>
-            <Link href="/" variants={item}>Accueil</Link>
-            <Link href="#" variants={item}>Menu</Link>
+            <Link variants={item}><NavLink to='/'>Accueil</NavLink></Link>
+            <Link variants={item}><NavLink to='/menu'>Menu</NavLink></Link>
+            <Link variants={item}><NavLink to='/localisation'>Localisation</NavLink></Link>
             <ThemeIcon onClick={toggleTheme} theme={theme} variants={item}>
               {theme === 'light' ? <FaMoon /> : <FaSun /> }
             </ThemeIcon>

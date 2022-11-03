@@ -1,0 +1,39 @@
+.carousel {
+  overflow: hidden;
+}
+
+.inner {
+  white-space: nowrap;
+  transition: transform 0.3s;
+}
+
+.carousel-item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.carousel-item > p {
+  font-weight: 600;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+}
+
+.indicators > button {
+  display: none;
+}
+
+.indicators > button.active {
+  background: #ffc14d;
+}
+
+@media screen and (max-width: 890px){
+  .carousel-item {
+    height: 200px;
+  }
+}
